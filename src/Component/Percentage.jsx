@@ -13,7 +13,7 @@ const Percentage = () => {
     {
         toast.warn("Please enter both numbers");
         setresult('0');
-        return 0;
+        return ;
     }
 
     if (!isNaN(firstNum) && !isNaN(secondNum) && secondNum !== 0) {

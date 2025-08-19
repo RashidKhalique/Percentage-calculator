@@ -12,7 +12,7 @@ const NumberPercentage = () => {
     if (!SNUm && !fNum) {
         toast.warn("Please enter both numbers");
              setSresult('0');
-             return 0;
+             return ;
     }
     if (!isNaN(percentNum) && !isNaN(baseNum)) {
       const calculated = (percentNum / 100) * baseNum

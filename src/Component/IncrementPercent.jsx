@@ -12,7 +12,7 @@ const IncrementPercent = () => {
         if (!final && !initial) {
             toast.warn("Please enter both numbers");
             setResult('0');
-            return 0;
+            return;
         }
 
         if (isNaN(from) || isNaN(to) || from === 0) {
