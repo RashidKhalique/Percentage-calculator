@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 
 const NumberPercentage = () => {
   const [fNum, setFNum] = useState('')
@@ -22,7 +23,7 @@ const NumberPercentage = () => {
   }
 
   return (
-    <div className="flex flex-wrap items-center w-full bg-gray-200 p-4 rounded shadow-sm gap-2 md:justify-between justify-center">
+    <div className="flex flex-wrap items-center w-full bg-gray-200 p-4  rounded shadow-sm gap-2 md:justify-between justify-center">
       <label className="flex items-center p-4">
         <span className="mr-2 text-[18px] font-light">What is</span>
         <input
@@ -43,7 +44,7 @@ const NumberPercentage = () => {
         <span className="mx-2 font-light text-[18px]">?</span>
       </label>
       <div className='flex justify-center gap-3'>
-        <button className="bg-[#336699] text-white px-4 py-1 rounded  font-light" onClick={handleCalculate}>
+        <button className="bg-[#336699] text-white font-light px-4 py-1 rounded" onClick={handleCalculate}>
           CALCULATE
         </button>
         <input
@@ -53,7 +54,7 @@ const NumberPercentage = () => {
           value={sresult}
         />
       </div>
-
+<ToastContainer/>
     </div>
   )
 }

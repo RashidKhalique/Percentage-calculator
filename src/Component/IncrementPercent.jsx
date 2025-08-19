@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
 
 const IncrementPercent = () => {
     const [initial, setInitial] = useState('')
@@ -24,7 +25,7 @@ const IncrementPercent = () => {
     }
 
     return (
-        <div className="flex flex-wrap items-center bg-gray-200 p-4 content-center rounded shadow-sm gap-4 md:justify-between justify-center ">
+        <div className="flex flex-wrap items-center bg-gray-200 p-4  rounded shadow-sm gap-4 md:justify-between justify-center ">
             <div className='flex flex-col items-center justify-center'>
                 <span className="text-center p-2 text-[18px] font-light  ">
                     What is the percentage increase/decrease
@@ -50,7 +51,7 @@ const IncrementPercent = () => {
 
             </div>
 
-            <div className='flex justify-center gap-3'>
+            <div className='flex justify-center gap-3 '>
                 <button className="bg-[#336699] text-white px-4 py-1 rounded font-light" onClick={calculatePercentage} >
                     CALCULATE
                 </button>
@@ -62,7 +63,7 @@ const IncrementPercent = () => {
                 />
                 <span className='font-light text-[18px]'>%</span>
             </div>
-
+            <ToastContainer/>
         </div>
     )
 }

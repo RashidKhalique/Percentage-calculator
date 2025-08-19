@@ -25,8 +25,8 @@ const Percentage = () => {
   }
 
   return (
-    <div className="flex flex-wrap items-center bg-gray-200 p-4 rounded shadow-sm gap-2 md:justify-between justify-center">
-      <label className="flex items-center p-4">
+    <div className="flex flex-wrap items-center bg-gray-200 py-3 px-1 rounded shadow-sm gap-2 md:justify-between justify-center">
+      <label className="flex items-center p-4 ">
         <input
           type="number"
           className="md:w-24 border border-gray-300 p-1 bg-amber-50 w-16 text-[18px] font-light"

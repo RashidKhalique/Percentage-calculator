@@ -7,7 +7,7 @@ import Footer from '../Component/Footer';
 
 function Calculator() {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center">
+    <div className="min-h-screen bg-white flex flex-col items-center ">
       {/* Header Section */}
      
       <header className="py-10 text-[18px] font-light">
