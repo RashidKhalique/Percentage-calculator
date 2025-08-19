@@ -8,48 +8,52 @@ const NumberPercentage = () => {
   const handleCalculate = () => {
     const percentNum = parseFloat(fNum)
     const baseNum = parseFloat(SNUm)
-    if(!SNUm && !fNum)
-    {
-        alert("Please enter both numbers");
+    if (!SNUm && !fNum) {
+        toast.warn("Please enter both numbers");
+             setSresult('0');
+             return 0;
     }
     if (!isNaN(percentNum) && !isNaN(baseNum)) {
       const calculated = (percentNum / 100) * baseNum
       setSresult(calculated.toFixed(2))
     } else {
-      setSresult('Error')
+      setSresult('-Infinity')
     }
   }
 
   return (
-    <div className="flex flex-wrap items-center w-full bg-gray-200 p-4 rounded shadow-sm gap-2 justify-center">
+    <div className="flex flex-wrap items-center w-full bg-gray-200 p-4 rounded shadow-sm gap-2 md:justify-between justify-center">
       <label className="flex items-center p-4">
-        <span className="mr-2">What is</span>
+        <span className="mr-2 text-[18px] font-light">What is</span>
         <input
           type="number"
-          className="w-20 border rounded p-1"
+          className="md:w-24 w-16 border border-gray-300 p-1 bg-amber-50 text-[18px] font-light"
           value={fNum}
           onChange={(e) => setFNum(e.target.value)}
           required
         />
-        <span className="mx-2">% of</span>
+        <span className="mx-2 text-[18px] font-light">% of</span>
         <input
           type="number"
-          className="w-24 border rounded p-1"
+          className="md:w-24 w-16 border border-gray-300 p-1 bg-amber-50 text-[18px] font-light"
           value={SNUm}
           onChange={(e) => setSNUm(e.target.value)}
           required
         />
-        <span className="mx-2">?</span>
+        <span className="mx-2 font-light text-[18px]">?</span>
       </label>
-      <button className="bg-blue-500 text-white px-4 py-1 rounded" onClick={handleCalculate}>
-        CALCULATE
-      </button>
-      <input
-        type="text"
-        disabled
-        className="w-20 border rounded p-1"
-        value={sresult}
-      />
+      <div className='flex justify-center gap-3'>
+        <button className="bg-[#336699] text-white px-4 py-1 rounded  font-light" onClick={handleCalculate}>
+          CALCULATE
+        </button>
+        <input
+          type="text"
+          disabled
+          className="md:w-24 w-20 border border-gray-300 p-1 bg-amber-50 text-[18px] font-light"
+          value={sresult}
+        />
+      </div>
+
     </div>
   )
 }

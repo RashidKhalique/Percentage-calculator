@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="max-w-4xl px-4 text-left">
+    <section className="max-w-3xl px-4 text-left">
         <h2 className="text-xl font-bold mb-2">About</h2>
         <p className="text-gray-700 mb-6">
           This website is designed to help you quickly and easily calculate percentages for a variety of purposes.
